@@ -118,7 +118,7 @@ public class TestscriptHotel extends BaseClass {
 		WebElement selectBtn = driver.findElement(
 				By.xpath("//div[text()='" + room_name + "']/../../following-sibling::*//span[text()='Đặt ngay']"));
 		selectBtn.click();
-//
+/////////
 	}
 
 	@Test()
