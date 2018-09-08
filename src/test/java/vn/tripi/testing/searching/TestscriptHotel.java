@@ -15,12 +15,12 @@ import org.testng.annotations.Test;
 
 import vn.tripi.testing.commons.BaseClass;
 
-public class TestscriptHotel  extends BaseClass {
-	
+public class TestscriptHotel extends BaseClass {
+
 	@Test
 	@Parameters({ "autocompletesearch", "checkindate", "checkoutdate", "number_room", "number_adult", "number_infant" })
 
-	public void TC_01_SearchHotel (String autocompletesearch, String checkindate, String checkoutdate, int number_room,
+	public void TC_01_SearchHotel(String autocompletesearch, String checkindate, String checkoutdate, int number_room,
 			int number_adult, int number_infant) throws Exception {
 
 		// click on Hotel tab
@@ -107,13 +107,13 @@ public class TestscriptHotel  extends BaseClass {
 		driver.findElement(By.xpath("//span[contains(text(),'Đặt phòng')]")).click();
 		ArrayList<String> tabs1 = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs1.get(1));
-        Thread.sleep(5000);  
+		Thread.sleep(5000);
 
 		List<WebElement> listroom = driver.findElements(By.cssSelector(".list-rooms-by-agency"));
 		System.out.println("Total room item :" + listroom.size());
 		int numroom = listroom.size();
 		assertTrue(numroom > 0);
-////////////
+
 		Thread.sleep(4000);
 		WebElement selectBtn = driver.findElement(
 				By.xpath("//div[text()='" + room_name + "']/../../following-sibling::*//span[text()='Đặt ngay']"));
