@@ -103,7 +103,7 @@ public class TestscriptHotel extends BaseClass {
 	@Parameters({ "room_name" })
 	public void TC_02_ChooseRoom(String room_name) throws InterruptedException {
 
-		// Nhấn vào nút Đặt Phòng
+		// Nhấn vào nút Đặt Phòng///
 		driver.findElement(By.xpath("//span[contains(text(),'Đặt phòng')]")).click();
 		ArrayList<String> tabs1 = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs1.get(1));
