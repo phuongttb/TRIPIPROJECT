@@ -113,7 +113,7 @@ public class TestscriptHotel  extends BaseClass {
 		System.out.println("Total room item :" + listroom.size());
 		int numroom = listroom.size();
 		assertTrue(numroom > 0);
-//////
+////////////
 		Thread.sleep(4000);
 		WebElement selectBtn = driver.findElement(
 				By.xpath("//div[text()='" + room_name + "']/../../following-sibling::*//span[text()='Đặt ngay']"));
