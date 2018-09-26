@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Parameterization_Test_Suite">
-              <span class="suite-name border-passed">Parameterization Test Suite</span>
+              <span class="suite-name border-failed">Parameterization Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Parameterization_Test_Suite" class="hide-methods failed suite-Parameterization_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Parameterization_Test_Suite -->
+                      <a href="#" panel-name="suite-Parameterization_Test_Suite" class="show-methods failed suite-Parameterization_Test_Suite"> (show)</a> <!-- show-methods failed suite-Parameterization_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Parameterization_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parameterization_Test_Suite" title="vn.tripi.testing.searching.FilterOrder" hash-for-method="TC_06_FilterDate(11, 20)">TC_06_FilterDate(11, 20)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Parameterization_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Parameterization_Test_Suite" title="vn.tripi.testing.searching.FilterOrder" hash-for-method="TC_01_Filterorder(0988100942, 123456@, 122397)">TC_01_Filterorder(0988100942, 123456@, 122397)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Parameterization_Test_Suite" title="vn.tripi.testing.searching.FilterOrder" hash-for-method="TC_02_FilterBookingCode(MJJORZ)">TC_02_FilterBookingCode(MJJORZ)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Parameterization_Test_Suite -->
@@ -122,6 +131,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Parameterization_Test_Suite" class="panel Parameterization_Test_Suite">
+          <div class="suite-Parameterization_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">vn.tripi.testing.searching.FilterOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_06_FilterDate(11, 20)">
+                  </a> <!-- TC_06_FilterDate(11, 20) -->
+                  <span class="method-name">TC_06_FilterDate</span>
+                  <span class="parameters">(11, 20)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[normalize-space()=&apos;11&apos;])&quot;}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-Q814VAM&apos;, ip: &apos;192.168.0.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\tanld\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63840}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: 3dde06ed64782f7eb2bb35142822fbbf
+*** Element info: {Using=xpath, value=(//div[normalize-space()=&apos;11&apos;])}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at vn.tripi.testing.searching.FilterOrder.TC_06_FilterDate(FilterOrder.java:154)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parameterization_Test_Suite-class-failed -->
           <div class="suite-Parameterization_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -134,14 +185,6 @@
                   </a> <!-- TC_01_Filterorder(0988100942, 123456@, 122397) -->
                   <span class="method-name">TC_01_Filterorder</span>
                   <span class="parameters">(0988100942, 123456@, 122397)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_02_FilterBookingCode(MJJORZ)">
-                  </a> <!-- TC_02_FilterBookingCode(MJJORZ) -->
-                  <span class="method-name">TC_02_FilterBookingCode</span>
-                  <span class="parameters">(MJJORZ)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,9 +208,10 @@
             &lt;parameter name=&quot;orderid&quot; value=&quot;122397&quot;/&gt;
             &lt;parameter name=&quot;username&quot; value=&quot;0988100942&quot;/&gt;
           &lt;/include&gt; &lt;!-- TC_01_Filterorder --&gt;
-          &lt;include name=&quot;TC_02_FilterBookingCode&quot;&gt;
-            &lt;parameter name=&quot;booking_code&quot; value=&quot;MJJORZ&quot;/&gt;
-          &lt;/include&gt; &lt;!-- TC_02_FilterBookingCode --&gt;
+          &lt;include name=&quot;TC_06_FilterDate&quot;&gt;
+            &lt;parameter name=&quot;check_out&quot; value=&quot;20&quot;/&gt;
+            &lt;parameter name=&quot;check_in&quot; value=&quot;11&quot;/&gt;
+          &lt;/include&gt; &lt;!-- TC_06_FilterDate --&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- vn.tripi.testing.searching.FilterOrder --&gt;
     &lt;/classes&gt;
@@ -211,18 +255,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_01_Filterorder')
+data.setCell(0, 1, 'TC_06_FilterDate')
 data.setCell(0, 2, 'vn.tripi.testing.searching.FilterOrder')
-data.setCell(0, 3, 25068);
+data.setCell(0, 3, 35999);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_02_FilterBookingCode')
+data.setCell(1, 1, 'TC_01_Filterorder')
 data.setCell(1, 2, 'vn.tripi.testing.searching.FilterOrder')
-data.setCell(1, 3, 14438);
+data.setCell(1, 3, 31033);
 window.suiteTableData['Parameterization_Test_Suite']= { tableData: data, tableDiv: 'times-div-Parameterization_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Parameterization_Test_Suite">
               </div> <!-- times-div-Parameterization_Test_Suite -->
             </div> <!-- times-div -->
@@ -237,9 +281,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Parameterization_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">vn.tripi.testing.searching.FilterOrder</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC_05_FilterStatusAll</span>
+                <br/>
+                <span class="ignored-method-name">TC_04_FilterStatusHolding</span>
+                <br/>
+                <span class="ignored-method-name">TC_03_FilterStatusSuccess</span>
+                <br/>
+                <span class="ignored-method-name">TC_02_FilterBookingCode</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Parameterization_Test_Suite" class="panel">
@@ -255,15 +312,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TC_01_Filterorder(0988100942, 123456@, 122397)</span>
-                <span class="method-start">9061 ms</span>
+                <span class="method-start">64818 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TC_02_FilterBookingCode(MJJORZ)</span>
-                <span class="method-start">34130 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_06_FilterDate(11, 20)</span>
+                <span class="method-start">95859 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">48568 ms</span>
+                <span class="method-start">131921 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

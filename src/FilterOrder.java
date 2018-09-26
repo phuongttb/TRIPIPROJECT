@@ -1,4 +1,4 @@
-package vn.tripi.testing.searching;
+package selenium_api;
 
 import static org.testng.AssertJUnit.assertTrue;
 

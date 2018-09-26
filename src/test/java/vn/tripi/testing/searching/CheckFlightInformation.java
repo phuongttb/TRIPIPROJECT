@@ -14,7 +14,7 @@ import vn.tripi.testing.commons.BaseClass;
 import vn.tripi.testing.utils.PriceConvert;
 import vn.tripi.testing.utils.TimeUtils;
 
-public class SortTicketandComparePrice extends BaseClass {
+public class CheckFlightInformation extends BaseClass {
 	@Test()
 	@Parameters({ "flight_fromairport", "flight_toairport", "flight_checkindate","selectagencyintbound" })
 	public void TC_Flight_CheckAllInformation(String flight_fromairport, String flight_toairport,
@@ -41,11 +41,8 @@ public class SortTicketandComparePrice extends BaseClass {
 		WebElement searchbutton = driver
 				.findElement(By.xpath("//button[@class='flight-search-button btn btn-search']"));
 		searchbutton.click();
-		Thread.sleep(3000);
-		WebElement filterbtn=driver.findElement(By.cssSelector(".btn-link"));
-		filterbtn.click();
-		Thread.sleep(4000);
-		
+		Thread.sleep(5000);
+
 		WebElement outBoundTicketsDiv = driver.findElement(By.cssSelector("#outBoundTickets"));
 		List<WebElement> outboundTickets = outBoundTicketsDiv.findElements(By.cssSelector(".ticket-info"));
 		boolean Selected = false;
@@ -56,13 +53,13 @@ public class SortTicketandComparePrice extends BaseClass {
 		String ob_timeto = new String();
 		String ob_price = new String();
 		int preFarePrice =-1;
-	
-		
 		for (WebElement tickets : outboundTickets) {
 			WebElement logo = tickets.findElement(By.cssSelector(".alogo"));
 			String agency = logo.getAttribute("alt");
 
-			
+			if (agency.contains(selectagencyintbound)) {
+				
+				Selected = true;
 				List<WebElement> route = tickets.findElements(By.cssSelector(".ticket-info-text"));
 				ob_from = (route.get(0)).getText();
 				ob_to = (route.get(1)).getText();
@@ -77,6 +74,9 @@ public class SortTicketandComparePrice extends BaseClass {
 				WebElement price = tickets.findElement(By.cssSelector(".ticket-price"));
 				ob_price = price.getText();
 
+				// thong tin hang bay
+				// khong can lay vi lay o bien airlines_ob_allInfor
+
 //				WebElement selectBtnob = tickets.findElement(By.cssSelector(".flight-select-single-ticket"));
 //				selectBtnob.click();
 				TimeUtils.sleep(2);
@@ -90,7 +90,7 @@ public class SortTicketandComparePrice extends BaseClass {
 				preFarePrice=farePrice;
 			}
 						
-	
+		}
 		if (!Selected) {
 			Assert.fail("Không có vé. Vui lòng chọn vé khác!");
 		}

@@ -10,11 +10,23 @@
             <parameter name="orderid" value="122397"/>
             <parameter name="username" value="0988100942"/>
           </include> <!-- TC_01_Filterorder -->
-          <include name="TC_02_FilterBookingCode">
-            <parameter name="booking_code" value="MJJORZ"/>
-          </include> <!-- TC_02_FilterBookingCode -->
+          <include name="TC_06_FilterDate">
+            <parameter name="check_out" value="20"/>
+            <parameter name="check_in" value="11"/>
+          </include> <!-- TC_06_FilterDate -->
         </methods>
       </class> <!-- vn.tripi.testing.searching.FilterOrder -->
     </classes>
   </test> <!-- Testing Parameterization -->
+  <test name="Testing Parameterization(failed)">
+    <classes>
+      <class name="vn.tripi.testing.searching.FilterOrder">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="TC_06_FilterDate" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- vn.tripi.testing.searching.FilterOrder -->
+    </classes>
+  </test> <!-- Testing Parameterization(failed) -->
 </suite> <!-- Failed suite [Parameterization Test Suite] -->

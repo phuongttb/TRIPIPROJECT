@@ -1,4 +1,4 @@
-package vn.tripi.testing.searching;
+package selenium_api;
 
 import java.util.List;
 
@@ -77,7 +77,7 @@ public class SortTicketandComparePrice extends BaseClass {
 				WebElement price = tickets.findElement(By.cssSelector(".ticket-price"));
 				ob_price = price.getText();
 
-//				WebElement selectBtnob = tickets.findElement(By.cssSelector(".flight-select-single-ticket"));
+				WebElement selectBtnob = tickets.findElement(By.cssSelector(".flight-select-single-ticket"));
 //				selectBtnob.click();
 				TimeUtils.sleep(2);
 				System.out.println(agency);
