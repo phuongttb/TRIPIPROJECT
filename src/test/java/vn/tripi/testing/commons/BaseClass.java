@@ -3,20 +3,20 @@ package vn.tripi.testing.commons;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-import vn.tripi.testing.utils.WebDriverFactory;
 
 public class BaseClass {
 	protected WebDriver driver = null;
 
 	@BeforeClass
-	public void beforeClass() {
-		driver = WebDriverFactory.getDriver();
-		driver.manage().window().maximize();
-		driver.get(System.getProperty("baseURL"));
+	public void beforeClass() {	
+		System.setProperty("webdriver.chrome.driver","./libs/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.tripi.vn/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
 	@AfterClass

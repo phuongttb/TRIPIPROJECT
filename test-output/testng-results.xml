@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parameterization Test Suite" duration-ms="49312" started-at="2018-09-08T10:30:32Z" finished-at="2018-09-08T10:31:22Z">
+    <groups>
+    </groups>
+    <test name="Testing Parameterization" duration-ms="49312" started-at="2018-09-08T10:30:32Z" finished-at="2018-09-08T10:31:22Z">
+      <class name="vn.tripi.testing.searching.FilterOrder">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:vn.tripi.testing.searching.FilterOrder@4563e9ab]" name="beforeClass" is-config="true" duration-ms="9057" started-at="2018-09-08T17:30:32Z" finished-at="2018-09-08T17:30:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Filterorder(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:vn.tripi.testing.searching.FilterOrder@4563e9ab]" name="TC_01_Filterorder" duration-ms="25068" started-at="2018-09-08T17:30:41Z" finished-at="2018-09-08T17:31:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0988100942]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[122397]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Filterorder -->
+        <test-method status="PASS" signature="TC_02_FilterBookingCode(java.lang.String)[pri:0, instance:vn.tripi.testing.searching.FilterOrder@4563e9ab]" name="TC_02_FilterBookingCode" duration-ms="14438" started-at="2018-09-08T17:31:06Z" finished-at="2018-09-08T17:31:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MJJORZ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_FilterBookingCode -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:vn.tripi.testing.searching.FilterOrder@4563e9ab]" name="afterClass" is-config="true" duration-ms="738" started-at="2018-09-08T17:31:21Z" finished-at="2018-09-08T17:31:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- vn.tripi.testing.searching.FilterOrder -->
+    </test> <!-- Testing Parameterization -->
+  </suite> <!-- Parameterization Test Suite -->
+</testng-results>

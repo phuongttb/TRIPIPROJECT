@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Parameterization Test Suite]">
+  <test name="Testing Parameterization">
+    <classes>
+      <class name="vn.tripi.testing.searching.FilterOrder">
+        <methods>
+          <include name="TC_01_Filterorder">
+            <parameter name="password" value="123456@"/>
+            <parameter name="orderid" value="122397"/>
+            <parameter name="username" value="0988100942"/>
+          </include> <!-- TC_01_Filterorder -->
+          <include name="TC_02_FilterBookingCode">
+            <parameter name="booking_code" value="MJJORZ"/>
+          </include> <!-- TC_02_FilterBookingCode -->
+        </methods>
+      </class> <!-- vn.tripi.testing.searching.FilterOrder -->
+    </classes>
+  </test> <!-- Testing Parameterization -->
+</suite> <!-- Failed suite [Parameterization Test Suite] -->

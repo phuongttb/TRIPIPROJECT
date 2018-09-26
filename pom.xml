@@ -39,11 +39,12 @@
 				<version>2.22.0</version>
 				<configuration>
 					<systemPropertyVariables>
-						<browserType>firefox</browserType>
+						<browserType>chrome</browserType>
 						<baseURL>https://www.tripi.vn</baseURL>
+						<webdriver.gecko.driver>E:/PROJECT AUTOMATION Maven/master/libs/geckodriver.exe</webdriver.gecko.driver>
 					</systemPropertyVariables>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testng-hien.xml</suiteXmlFile>
+						<suiteXmlFile>FilterOrderCode.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

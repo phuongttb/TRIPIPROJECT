@@ -64,7 +64,7 @@
 
 
 		<classes>
-			<class name="vn.tripi.testing.searching.FlightTestCases" />
+			<class name="vn.tripi.testing.searching.FlightTestCase" />
 		</classes>
 	</test> <!-- Test -->
 

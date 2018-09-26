@@ -15,7 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import java.util.Calendar;
 
-public class FlightTestCases extends BaseClass {
+public class FlightTestCase extends BaseClass {
 	// ------------------------------------------- Method 1
 	@Parameters({ "from_airport", "to_airport", "from_date_add", "to_date_add", "adult_num", "child_num",
 			"infant_num" })
